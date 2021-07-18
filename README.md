@@ -1,4 +1,4 @@
-# Python library for NearZero Controller(tm) - nzerolib
+# Python library for NearZero(tm) Controllers - nzerolib
 
 Python library to manage the [NearZero](https://github.com/jhaupt/NearZero1) Brushless Motor Controller for robotics.
 
