@@ -4,7 +4,7 @@ Python library to manage the [NearZero](https://github.com/jhaupt/NearZero1) Bru
 
 Based in the examples of the [awesome work](https://www.youtube.com/watch?v=OZvjfbpXpro) made by [JHaupt](https://github.com/jhaupt). 
 
-This does the same thing her examples do, but tries to be more reusable and distributable.
+This does the same thing her examples do, but tries to be a reusable and distributable module.
 
 With this you can:
 - Sends data to a NearZero controller.
@@ -43,7 +43,7 @@ Control the Robot:
 
 Run without a real NearZero hardware (Debug Mode):
 ```python
-   # this makes sata sent to the i2c interface be printed on screen
+   # this makes data sent to the i2c interface be printed on screen
    bot = Robot(debug=True)
    # or
    Wheel.write('v', velocity, current, debug=True)
