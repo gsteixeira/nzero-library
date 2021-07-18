@@ -20,55 +20,55 @@ Installation:
 
 Basic low level operation:
 ```python
-   from nzerolib import NZero
-   # instantiate NZ
-   Wheel = NZero("TheWheel", 0x40, 1)
-   velocity = 30
-   current = 20
-   # control the motor
-   Wheel.write('v', velocity, current)
+from nzerolib import NZero
+# instantiate NZ
+Wheel = NZero("TheWheel", 0x40, 1)
+velocity = 30
+current = 20
+# control the motor
+Wheel.write('v', velocity, current)
 
 ```
 
 Control the Robot:
 ```python
-   from nzerolib import Robot
-   import time
-   # The Robot will walk for two seconds, then stop
-   bot = Robot()
-   bot.go_forward()
-   time.sleep(2)
-   bot.stop_move()
+from nzerolib import Robot
+import time
+# The Robot will walk for two seconds, then stop
+bot = Robot()
+bot.go_forward()
+time.sleep(2)
+bot.stop_move()
 ```
 
 Run without a real NearZero hardware (Debug Mode):
 ```python
-   # this makes data sent to the i2c interface be printed on screen
-   bot = Robot(debug=True)
-   # or
-   Wheel.write('v', velocity, current, debug=True)
+# this makes data sent to the i2c interface be printed on screen
+bot = Robot(debug=True)
+# or
+wheel = NZero("TheWheel", 0x40, 1, debug=True)
 ```
 
 Extending the robot class:
 ```python
-   from nzerolib import Robot
-   
-   class CleaningBot(Robot):
-        def vacuum_clean(self):
-            # ...
-        def mop_floor(self):
-            # ...
+from nzerolib import Robot
+
+class CleaningBot(Robot):
+    def vacuum_clean(self):
+        # ...
+    def mop_floor(self):
+        # ...
 ```
 
 Controling the Robot with the keyboard:
 ```python
-   from nzerolib import Robot, KeyboardDriver
-   # the robot class has a method, just call it
-   bot.keyboard_drive()
-   
-   # but you can also instantiate a new robot and drive like this
-   keyb = KeyboardDriver(bot)
-   keyb.drive()
+from nzerolib import Robot, KeyboardDriver
+# the robot class has a method, just call it
+bot.keyboard_drive()
+
+# but you can also instantiate a new robot and drive like this
+keyb = KeyboardDriver(bot)
+keyb.drive()
 ```
 
 Look for more examples at the "demo" directory.
