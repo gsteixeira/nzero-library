@@ -13,7 +13,8 @@ With this you can:
 
 Installation:
     
-```pip install git+https://github.com/gsteixeira/nzero-library
+```shell
+   pip install git+https://github.com/gsteixeira/nzero-library
 
 ```
 
