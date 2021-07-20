@@ -54,6 +54,11 @@ Extending the robot class:
 from nzerolib import Robot
 
 class CleaningBot(Robot):
+    def __init__(self, *args, **kwargs):
+        super(CleaningBot, self).__init__(*args, **kwargs)
+        # instantiate more devices
+        self.vacuum = NZero("VacuumCleaner", 0x42, 1)
+
     def vacuum_clean(self):
         # ...
     def mop_floor(self):
